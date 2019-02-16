@@ -411,6 +411,8 @@ pub fn generate_emscripten_env(globals: &mut EmscriptenGlobals) -> ImportObject 
             // Memory
             "abortOnCannotGrowMemory" => func!(crate::memory::abort_on_cannot_grow_memory),
             "_emscripten_memcpy_big" => func!(crate::memory::_emscripten_memcpy_big),
+            "_emscripten_get_heap_size" => func!(crate::memory::_emscripten_get_heap_size),
+            "_emscripten_resize_heap" => func!(crate::memory::_emscripten_resize_heap),
             "enlargeMemory" => func!(crate::memory::enlarge_memory),
             "getTotalMemory" => func!(crate::memory::get_total_memory),
             "___map_file" => func!(crate::memory::___map_file),
